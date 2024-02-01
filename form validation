@@ -1,0 +1,125 @@
+<html>
+        <head>
+                <title>form</title>
+                <link rel="stylesheet" href="formstyle.css">
+        </head>
+        <body>
+               <h1>Registration Form</h1>
+                <form action="" onsubmit="return validate()" >
+                      Name: <input type="text" placeholder="Enter name" id="uname" ><br><br><br>
+                       Gender: <input type="radio" name="gender" id="gender1">Male
+                                          <input type="radio" name="gender" id="gender1">Female<br><br><br>
+                       Nationality:<select id="slct">
+                        <option></option>
+                        <option>Indian</option>
+                        <option>American</option>
+                        <option>African</option>
+                        <option>Canadian</option>
+                       </select>
+                       <br><br><br>
+                       Activities:<input type="checkbox" id="chckbx" name="chckbx1">NSS
+                       <input type="checkbox" id="chckbx" name="chckbx3">NCC
+                       <br><br><br>
+                       Contact:<input type="text" id="num" placeholder="Enter phone number"><br><br><br>
+                       Username:<input type="text"id="name" placeholder="Enter user name" ><br><br><br>
+                       Email:<input type="text"id="mail" placeholder="Enter email" ><br><br><br>
+                     Password:<input type="password" id="pswd" placeholder="Enter the password"><br>
+                    <br><br>
+                    <button>submit</button>   <button>reset</button>      </body>
+</html>
+<script type="text/javascript">
+    function validate()
+    {
+        var a=document.getElementById("uname").value;
+        var b=document.getElementById("gender1").value;
+        var c=document.getElementById("slct").value;
+        var d=document.getElementById("chckbx").value;
+        var e=document.getElementById("num").value;
+        var f=document.getElementById("name").value;
+        var g=document.getElementById("mail").value;
+        var h=document.getElementById("pswd").value;
+        var phn=/^[6-9][0-9]{9}$/;
+        var m=/^([a-zA-z0-9]\.-)@([a-z]{2,10}).([a-z]{2,5})/;
+        var s=/^[A-Z][a-z]{2,15}$/
+        var p=/^\w@-.#/;
+        if(a.trim()=="")
+        {
+            alert("Name can't be empty");
+            document.form.a.focus();
+            return false;
+        }
+        else if(!s.test(a))
+        {
+            alert("Enter valid name!!");
+            document.form.a.focus();
+            return false;
+        }
+       if(b=="")
+        {
+            alert("Select any one!!");
+            document.form.b.focus();
+            return false;
+        }
+        if(c=="")
+        {
+            alert("Select any one!!");
+            document.form.c.focus();
+            return false;
+        }
+        if(d=="")
+        {
+            alert("Can't be empty!!!");
+            document.form.a.focus();
+            return false;
+        }
+        if(e.trim()=="")
+        {
+            alert("Number can't be empty");
+            document.form.e.focus();
+            return false;
+        }
+        else if(!phn.test(e))
+        {
+            alert("Enter valid phone number");
+            document.form.e.focus();
+            return false;
+        }
+       if(f.trim()=="")
+        {
+            alert("Username can't be empty");
+            document.form.a.focus();
+            return false;
+        }
+         if(!s.test(f))
+        {
+            alert("Enter valid Username!!");
+            document.form.f.focus();
+            return false;
+        }
+       if(g.trim()=="")
+        {
+            alert("Email can't be empty");
+            document.form.g.focus();
+            return false;
+        }
+        else if(!m.test(g))
+        {
+            alert("Enter a valid mail!!!");
+            document.form.g.focus();
+            return false;
+        }
+        if(h.trim()=="")
+        {
+            alert("Password can't be empty");
+            document.form.h.focus();
+            return false;
+        }
+        else if(!p.test(h)||h.length<8)
+        {
+            alert("Enter a valid mail!!!");
+            document.form.g.focus();
+            return False;
+        }
+        
+    }
+</script>
