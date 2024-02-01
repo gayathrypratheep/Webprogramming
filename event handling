@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>events</title>
+    </head>
+    <style>
+        .content
+        {
+            width:100%;
+            height: 50%;
+            box-shadow: 0 4px 10 px 0, 0 4px 20px 0;
+        }
+        #head1
+        {
+            text-align: center;
+            display: block;
+        }
+        #head2
+        {
+            text-align: center;
+            display: none;
+        }
+        #img1
+        {
+            width:100%;
+            height:50%;
+        }
+    </style>
+    <body>
+        <div class="content">
+            <img id="img1" src="mini.jpg">
+            <div >
+               <h1 id="head1">Mouse over</h1>
+               <h1 id="head2">Hello</h1>
+            </div>
+        </div>
+        <script>
+            document.getElementById("img1").addEventListener("mouseover",change);
+            document.getElementById("img1").addEventListener("mouseout",change1);
+            function change()
+            {
+                document.getElementById("img1").src="C:\Users\Admin\Pictures\flower.jpg";
+                document.getElementById("head1").style.display="none";
+                document.getElementById("head2").style.display="block";
+            }
+            function change1()
+            {
+                document.getElementById("img1").src="flower1.jpg";
+                document.getElementById("head1").style.display="block";
+                document.getElementById("head2").style.display="none";
+            }
+        </script>
+    </body>
+</html>
