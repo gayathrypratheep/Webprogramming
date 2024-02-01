@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>math functions</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+    <script type="text/javascript">
+        function math()
+        {
+        let x=document.getElementById("var").value;
+        let y=document.getElementById("var1").value;
+        document.getElementById("table").style.visibility="visible";
+        document.getElementById("display").innerHTML=Math.floor(x);
+        document.getElementById("display1").innerHTML=Math.ceil(x);
+        document.getElementById("display2").innerHTML=Math.abs(x);
+        document.getElementById("display3").innerHTML=Math.pow(x,y);
+        document.getElementById("display4").innerHTML=Math.random();
+        }
+        function string()
+        {
+            let s=document.getElementById("str").value;
+            document.getElementById("table1").style.visibility="visible";
+            document.getElementById("dis").innerHTML=s.length;
+            document.getElementById("dis4").innerHTML=s.charAt(2);
+            document.getElementById("dis1").innerHTML=s.toUpperCase();
+            document.getElementById("dis2").innerHTML=s.toLowerCase();
+            document.getElementById("dis3").innerHTML=s.slice(2,4);
+        }
+    </script>
+    <h1>Math Functions</h1>
+        <input type="text" id="var" placeholder="Enter a value"><br>
+        <input type="text" id="var1" placeholder="Enter the power"><br>
+        <input type="submit" value="Submit" onclick="return math()">
+        <table border="1" id="table" style="visibility: hidden;">
+        <tr><td >Floor function </td>
+        <td id="display"></td></tr>
+        <tr><td >Ceiling function </td>
+            <td id="display1"></td></tr>
+            <tr><td >absolute </td>
+                <td id="display2"></td></tr>    
+                <tr><td >power </td>
+                    <td id="display3"></td></tr>
+                    <tr><td >random </td>
+                        <td id="display4"></td></tr>  
+    <h1> String functions</h1>
+    <input type="text" id="str" placeholder="Enter a string"><br>
+        <input type="submit" value="Submit" onclick="return string()">
+        <table border="1" id="table1" style="visibility: hidden;">
+            <tr><td >length </td>
+                <td id="dis"></td></tr>
+                <tr><td >Uppercase </td>
+                    <td id="dis1"></td></tr>
+                    <tr><td >Lowercase</td>
+                        <td id="dis2"></td></tr>    
+                        <tr><td >Slice </td>
+                            <td id="dis3"></td></tr> 
+                            <tr><td >CharAt </td>
+                                <td id="dis4"></td></tr> 
+    </table>
+ </body>       
+</html>
